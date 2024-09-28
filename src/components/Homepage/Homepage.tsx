@@ -6,6 +6,8 @@ function Homepage() {
         This is GameDevHub, a place where you can interact with developers and
         their projects!
       </p>
+
+      <h2>Followed Hubs:</h2>
     </>
   );
 }
