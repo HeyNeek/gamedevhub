@@ -29,7 +29,7 @@ function Navbar() {
           </li>
         )}
       </ul>
-      <div className="navbar-brand">My Website</div>
+      <div className="navbar-brand">GameDevHub</div>
     </nav>
   );
 }
