@@ -1,10 +1,14 @@
+import { useUserStore } from "../../stores/userStore";
+
 function Profile() {
+  const { user } = useUserStore();
+
   return (
     <>
       <h1>Profile Page</h1>
-      <p>Username</p>
-      <p>Bio</p>
-      <p>Picture</p>
+      <p>{user?.name}</p>
+      <p>{user?.bio}</p>
+      <p>{user?.picture}</p>
     </>
   );
 }

@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+
+import { useUserStore } from "../../stores/userStore";
+
 import "./Navbar.css";
 
-interface INavbarProps {
-  user: User | undefined;
-}
+function Navbar() {
+  const { user } = useUserStore();
 
-function Navbar({ user }: INavbarProps) {
   return (
     <nav className="navbar">
       <ul className="navbar-list">

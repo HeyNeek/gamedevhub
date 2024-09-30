@@ -1,18 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { useUserStore } from "../../stores/userStore";
 
-interface ILoginProps {
-  setUser: React.Dispatch<React.SetStateAction<User | undefined>>;
-}
-
-function Login({ setUser }: ILoginProps) {
+function Login() {
   const navigate = useNavigate();
+  const { setUser } = useUserStore();
 
   const userObj: User = {
     name: "NikoNikoNeek",
     bio: "Im a mexican programmer from Texas",
     picture: "nick.jpg",
   };
-
+  //eventually this will fetch the user info via the inputted info
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setUser(userObj);
